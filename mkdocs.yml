@@ -49,8 +49,7 @@ theme:
 plugins:
   - search
   - git-revision-date
-  - macros:
-      module_name: docs/main
+  - macros
   - minify:
       minify_html: true
       minify_js: true
