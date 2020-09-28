@@ -77,6 +77,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/go-rel
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/go-rel/rel
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/Fs02
 
