@@ -4,6 +4,7 @@ site_author: REL
 site_url: https://go-rel.github.io/
 repo_url: https://github.com/go-rel/rel
 repo_name: go-rel/rel
+edit_uri: ../doc/edit/master/docs/
 
 nav:
   - Home: index.md
