@@ -1,5 +1,3 @@
 files:
   - source: /docs/*.md
     translation: /%two_letters_code%/%file_name%.%file_extension%
-  - source: /mkdocs.yml
-    translation: /mkdocs-%two_letters_code%.yml
