@@ -1,6 +1,6 @@
-# Adapters
+# Adapter
 
-Rel uses adapter in order to generate and execute query to a database, below is the list of available adapters currently supported.
+Rel menggunakan adapter untuk membuat dan mengeksekusi kueri ke basis data, berikut ini adalah daftar adapter yang didukung.
 
 | Adapter    | Package                                | Godoc                                                                                                                                     |
 | ---------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
