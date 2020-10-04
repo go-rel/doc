@@ -50,10 +50,13 @@ Preload will load association to structs. To preload association, use `Preload`.
 
 ## Inserting and Updating Association
 
-REL will automatically creates or updates association by using `Insert` or `Update` method. If `ID` of association struct is not a zero value, REL will try to update the association, else it'll create a new association.
+REL can automatically modifies association when it's parent is modified.
+If `ID` of association struct is not a zero value, REL will try to update the association, else it'll create a new association.
 
 !!! note
-    REL will try to create a new record for association if Primary Value (`ID`) is a zero value.
+    Autosave feature needs to be explicitly enabled by adding (`autosave:"true"`) tag to the struct definition.
+
+    Example: see `User.Address` struct.
 
 === "Example"
     {{ embed_code("examples/association.go","insert-association", "\t") }}
