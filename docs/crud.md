@@ -5,7 +5,7 @@
 A new record can be inserted to database using a struct, map or set function. To insert a new record using a struct, simply pass the pointer to the instance as the only argment. Insertion using struct will update `created_at` and `updated_at` field if any.
 
 !!! note
-    reltest.Repository will automatically sets any primary key value to be 1.
+    `reltest.Repository` will automatically sets any primary key value to be 1.
 
 *Inserting a record:*
 
