@@ -4,7 +4,7 @@
 
 ### Association Definition
 
-Before 0.9.x all association is saved as is when its parent is modified, after this PR (https://github.com/go-rel/rel/pull/127) this feature needs to be explicitly disabled.
+Before 0.9.x all association is saved as is when its parent is modified, after this PR (https://github.com/go-rel/rel/pull/127) this feature needs to be explicitly enabled.
 
 === "0.8.x"
 
