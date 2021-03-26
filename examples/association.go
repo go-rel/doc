@@ -27,8 +27,10 @@ type User struct {
 	// has one address.
 	// doesn't contains primary key of other struct.
 	// REL can guess the reference and foreign field if it's not specified.
-	// Autosave tag tells rel to save the association when the parent is inserted/updated/deleted.
-	Address Address `autosave:"true"`
+	// autosave tag tells rel to automatically save the association when the parent is inserted/updated/deleted.
+	// autoload tag tells rel to automatically load the association when record is queried.
+	// alternatively you can use auto to enable both autoload and autosave.
+	Address Address `autosave:"true" autoload:"true"`
 }
 
 // Transaction schema.

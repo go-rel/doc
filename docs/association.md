@@ -78,3 +78,12 @@ To selectively update only specific fields or association, `use rel.Map`.
     {{ embed_code("examples/association.go","update-association-with-map", "\t") }}
 === "Mock"
     {{ embed_code("examples/association_test.go", "update-association-with-map", "\t") }}
+
+
+## Auto Saving and Loading Association
+
+REL supports automatic loading or saving of association in structs by specifying the following struct tags:
+
+- `autosave="true"`: Enables automatic saving of the association whenever parent is inserted/updated/deleted.
+- `autoload="true"`: Enables automatic preloading of the association whenever parent is queried.
+- `auto="true"`: Shorthand for enabling both `autosave="true"` and `autoload="true"`.
