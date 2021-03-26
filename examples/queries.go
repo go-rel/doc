@@ -70,6 +70,16 @@ func QueriesConditionAdvanced(ctx context.Context, repo rel.Repository) error {
 	return err
 }
 
+// QueriesConditionSubquery docs example.
+func QueriesConditionSubquery(ctx context.Context, repo rel.Repository) error {
+	/// [condition-subquery]
+	var books []Book
+	err := repo.FindAll(ctx, &books, where.Lt("price", rel.Select("AVG(price)").From("books")))
+	/// [condition-subquery]
+
+	return err
+}
+
 // QueriesConditionAdvancedChain docs example.
 func QueriesConditionAdvancedChain(ctx context.Context, repo rel.Repository) error {
 	/// [condition-advanced-chain]
