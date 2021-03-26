@@ -70,6 +70,17 @@ You can use `rel.And` or `rel.Or` to specify more conditions.
 === "Mock"
     {{ embed_code("examples/queries_test.go", "condition-advanced-alias", "\t") }}
 
+## Subquery
+
+Subquery is supported in condition clause, you can pass any query to the where/having parameter.
+
+*Retrieve all books that is cheaper than average book price:*
+
+=== "Example"
+    {{ embed_code("examples/queries.go", "condition-subquery", "\t") }}
+=== "Mock"
+    {{ embed_code("examples/queries_test.go", "condition-subquery", "\t") }}
+
 ## Sorting
 
 To retrieve records from database in a specific order, you can use the sort api.

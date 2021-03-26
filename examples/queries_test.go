@@ -114,6 +114,24 @@ func TestQueriesConditionAdvanced(t *testing.T) {
 	repo.AssertExpectations(t)
 }
 
+func TestQueriesConditionSubquery(t *testing.T) {
+	var (
+		ctx  = context.TODO()
+		repo = reltest.New()
+	)
+
+	/// [condition-subquery]
+	books := []Book{
+		{ID: 1, Title: "REL for dummies", Price: 100},
+		{ID: 2, Title: "REL for dummies", Price: 50, Discount: true},
+	}
+	repo.ExpectFindAll(where.Lt("price", rel.Select("AVG(price)").From("books"))).Result(books)
+	/// [condition-subquery]
+
+	assert.Nil(t, QueriesConditionSubquery(ctx, repo))
+	repo.AssertExpectations(t)
+}
+
 func TestQueriesConditionAdvancedChain(t *testing.T) {
 	var (
 		ctx  = context.TODO()
