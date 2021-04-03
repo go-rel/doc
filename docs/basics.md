@@ -17,7 +17,8 @@ Testing database query using REL can be done using [reltest](/reference/reltest/
 
 ### Other Examples
 
-- [go-todo-backend](https://github.com/Fs02/go-todo-backend) - Todo Backend
+- [gin-example](https://github.com/go-rel/gin-example) - Todo Backend using Gin and REL
+- [go-todo-backend](https://github.com/Fs02/go-todo-backend) - Todo Backend using Chi and REL
 
 ## Conventions
 
