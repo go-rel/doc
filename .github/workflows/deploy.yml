@@ -53,7 +53,7 @@ jobs:
             'mkdocs-git-revision-date-plugin==0.3'
       - name: Install godoc2md
         working-directory: doc
-        run: go get github.com/davecheney/godoc2md
+        run: go get github.com/Yarn-e/godoc2md
       - name: Build site
         working-directory: doc
         env:
