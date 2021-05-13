@@ -26,10 +26,12 @@ nav:
     - github.com/go-rel/rel/reltest: reference/reltest.md
     - github.com/go-rel/rel/sort: reference/sort.md
     - github.com/go-rel/rel/where: reference/where.md
+    - github.com/go-rel/rel/changeset: reference/changeset.md
     - github.com/go-rel/rel/adapter/mysql: reference/adapter-mysql.md
     - github.com/go-rel/rel/adapter/postgres: reference/adapter-postgres.md
     - github.com/go-rel/rel/adapter/sql: reference/adapter-sql.md
     - github.com/go-rel/rel/adapter/sqlite3: reference/adapter-sqlite3.md
+    - github.com/go-rel/rel/mssql: reference/adapter-mssql.md
   - Adapters:
     - Adapters: adapters.md
   - Changelog:
