@@ -102,12 +102,12 @@ func CrudUpdate(ctx context.Context, repo rel.Repository) error {
 }
 
 // CrudUpdateAll docs example.
-func CrudUpdateAll(ctx context.Context, repo rel.Repository) error {
+func CrudUpdateAll(ctx context.Context, repo rel.Repository) (int, error) {
 	/// [update-all]
-	err := repo.UpdateAll(ctx, rel.From("books").Where(where.Lt("stock", 100)), rel.Set("discount", true))
+	updatedCount, err := repo.UpdateAll(ctx, rel.From("books").Where(where.Lt("stock", 100)), rel.Set("discount", true))
 	/// [update-all]
 
-	return err
+	return updatedCount, err
 }
 
 // CrudDelete docs example.
@@ -122,10 +122,10 @@ func CrudDelete(ctx context.Context, repo rel.Repository) error {
 }
 
 // CrudDeleteAll docs example.
-func CrudDeleteAll(ctx context.Context, repo rel.Repository) error {
+func CrudDeleteAll(ctx context.Context, repo rel.Repository) (int, error) {
 	/// [delete-all]
-	err := repo.DeleteAll(ctx, rel.From("books").Where(where.Eq("id", 1)))
+	deletedCount, err := repo.DeleteAll(ctx, rel.From("books").Where(where.Eq("id", 1)))
 	/// [delete-all]
 
-	return err
+	return deletedCount, err
 }

@@ -190,7 +190,8 @@ func TestCrudUpdateAll(t *testing.T) {
 	repo.ExpectUpdateAll(rel.From("books").Where(where.Lt("stock", 100)), rel.Set("discount", true))
 	/// [update-all]
 
-	assert.Nil(t, CrudUpdateAll(ctx, repo))
+	_, err := CrudUpdateAll(ctx, repo)
+	assert.Nil(t, err)
 	repo.AssertExpectations(t)
 }
 
@@ -219,6 +220,7 @@ func TestCrudDeleteAll(t *testing.T) {
 	repo.ExpectDeleteAll(rel.From("books").Where(where.Eq("id", 1)))
 	/// [delete-all]
 
-	assert.Nil(t, CrudDeleteAll(ctx, repo))
+	_, err := CrudDeleteAll(ctx, repo)
+	assert.Nil(t, err)
 	repo.AssertExpectations(t)
 }
