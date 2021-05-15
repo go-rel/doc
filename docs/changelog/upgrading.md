@@ -1,5 +1,31 @@
 # Upgrading
 
+## Upgrading from 0.13.x 0.14.x
+
+### UpdateAll and DeleteAll
+
+`UpdateAll` and `DeleteAll` function now returns affected rows instead of just error.
+
+=== "0.13.x"
+
+    ```go
+    // UpdateAll
+    err := repo.UpdateAll(ctx, query, Set("notes", "notes"))
+    
+    // DeleteAll
+    err := repo.DeleteAll(ctx, query)
+    ```
+
+=== "0.14.x"
+
+    ```go
+    // UpdateAll
+    updatedCount, err := repo.UpdateAll(ctx, query, Set("notes", "notes"))
+    
+    // DeleteAll
+    deletedCount, err := repo.DeleteAll(ctx, query)
+    ```
+
 ## Upgrading from 0.8.x 0.9.x
 
 ### Association Definition
