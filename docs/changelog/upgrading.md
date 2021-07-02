@@ -6,17 +6,17 @@
 
 `UpdateAll` and `DeleteAll` now renamed to UpdateAny and DeleteAny respectively.
 
-=== "0.13.x"
+=== "0.16.x"
 
     ```go
-    // UpdateAny
-    err := repo.UpdateAny(ctx, query, Set("notes", "notes"))
+    // UpdateAll
+    err := repo.UpdateAll(ctx, query, Set("notes", "notes"))
 
-    // DeleteAny
-    err := repo.DeleteAny(ctx, query)
+    // DeleteAll
+    err := repo.DeleteAll(ctx, query)
     ```
 
-=== "0.14.x"
+=== "0.17.x"
 
     ```go
     // UpdateAny
