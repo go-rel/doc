@@ -18,7 +18,7 @@ This is the list for available operations:
 - `rel-insert-all`
 - `rel-update`
 - `rel-delete`
-- `rel-delete-all`
+- `rel-delete-any`
 - `rel-preload`
 - `rel-transaction`
 - `adapter-aggregate`

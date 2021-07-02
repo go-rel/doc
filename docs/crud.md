@@ -77,12 +77,12 @@ An update using struct will cause all fields and association to be saved to data
 === "Mock"
     {{ embed_code("examples/crud_test.go", "update", "\t") }}
 
-*Updating multiple records is possible using `UpdateAll`:*
+*Updating records is custom query:*
 
 === "Example"
-    {{ embed_code("examples/crud.go", "update-all", "\t") }}
+    {{ embed_code("examples/crud.go", "update-any", "\t") }}
 === "Mock"
-    {{ embed_code("examples/crud_test.go", "update-all", "\t") }}
+    {{ embed_code("examples/crud_test.go", "update-any", "\t") }}
 
 ## Delete
 
@@ -99,9 +99,17 @@ To delete a record in rel, simply pass the record to be deleted.
     {{ embed_code("examples/crud_test.go", "delete", "\t") }}
 
 
-*Deleting multiple records:*
+*Deleting multiple record:*
 
 === "Example"
     {{ embed_code("examples/crud.go", "delete-all", "\t") }}
 === "Mock"
     {{ embed_code("examples/crud_test.go", "delete-all", "\t") }}
+
+
+*Deleting records using custom query:*
+
+=== "Example"
+    {{ embed_code("examples/crud.go", "delete-any", "\t") }}
+=== "Mock"
+    {{ embed_code("examples/crud_test.go", "delete-any", "\t") }}
