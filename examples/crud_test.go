@@ -180,17 +180,17 @@ func TestCrudUpdate(t *testing.T) {
 	repo.AssertExpectations(t)
 }
 
-func TestCrudUpdateAll(t *testing.T) {
+func TestCrudUpdateAny(t *testing.T) {
 	var (
 		ctx  = context.TODO()
 		repo = reltest.New()
 	)
 
-	/// [update-all]
-	repo.ExpectUpdateAll(rel.From("books").Where(where.Lt("stock", 100)), rel.Set("discount", true))
-	/// [update-all]
+	/// [update-any]
+	repo.ExpectUpdateAny(rel.From("books").Where(where.Lt("stock", 100)), rel.Set("discount", true))
+	/// [update-any]
 
-	_, err := CrudUpdateAll(ctx, repo)
+	_, err := CrudUpdateAny(ctx, repo)
 	assert.Nil(t, err)
 	repo.AssertExpectations(t)
 }
@@ -212,15 +212,30 @@ func TestCrudDelete(t *testing.T) {
 
 func TestCrudDeleteAll(t *testing.T) {
 	var (
+		ctx   = context.TODO()
+		repo  = reltest.New()
+		books []Book
+	)
+
+	/// [delete-all]
+	repo.ExpectDeleteAll().For(&books)
+	/// [delete-all]
+
+	assert.Nil(t, CrudDeleteAll(ctx, repo))
+	repo.AssertExpectations(t)
+}
+
+func TestCrudDeleteAny(t *testing.T) {
+	var (
 		ctx  = context.TODO()
 		repo = reltest.New()
 	)
 
-	/// [delete-all]
-	repo.ExpectDeleteAll(rel.From("books").Where(where.Eq("id", 1)))
-	/// [delete-all]
+	/// [delete-any]
+	repo.ExpectDeleteAny(rel.From("books").Where(where.Eq("id", 1)))
+	/// [delete-any]
 
-	_, err := CrudDeleteAll(ctx, repo)
+	_, err := CrudDeleteAny(ctx, repo)
 	assert.Nil(t, err)
 	repo.AssertExpectations(t)
 }

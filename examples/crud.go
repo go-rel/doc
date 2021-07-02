@@ -101,11 +101,11 @@ func CrudUpdate(ctx context.Context, repo rel.Repository) error {
 	return err
 }
 
-// CrudUpdateAll docs example.
-func CrudUpdateAll(ctx context.Context, repo rel.Repository) (int, error) {
-	/// [update-all]
-	updatedCount, err := repo.UpdateAll(ctx, rel.From("books").Where(where.Lt("stock", 100)), rel.Set("discount", true))
-	/// [update-all]
+// CrudUpdateAny docs example.
+func CrudUpdateAny(ctx context.Context, repo rel.Repository) (int, error) {
+	/// [update-any]
+	updatedCount, err := repo.UpdateAny(ctx, rel.From("books").Where(where.Lt("stock", 100)), rel.Set("discount", true))
+	/// [update-any]
 
 	return updatedCount, err
 }
@@ -122,10 +122,21 @@ func CrudDelete(ctx context.Context, repo rel.Repository) error {
 }
 
 // CrudDeleteAll docs example.
-func CrudDeleteAll(ctx context.Context, repo rel.Repository) (int, error) {
+func CrudDeleteAll(ctx context.Context, repo rel.Repository) error {
+	var books []Book
+
 	/// [delete-all]
-	deletedCount, err := repo.DeleteAll(ctx, rel.From("books").Where(where.Eq("id", 1)))
+	err := repo.DeleteAll(ctx, &books)
 	/// [delete-all]
+
+	return err
+}
+
+// CrudDeleteAny docs example.
+func CrudDeleteAny(ctx context.Context, repo rel.Repository) (int, error) {
+	/// [delete-any]
+	deletedCount, err := repo.DeleteAny(ctx, rel.From("books").Where(where.Eq("id", 1)))
+	/// [delete-any]
 
 	return deletedCount, err
 }

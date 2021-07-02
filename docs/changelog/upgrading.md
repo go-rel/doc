@@ -1,6 +1,32 @@
 # Upgrading
 
-## Upgrading from 0.13.x 0.14.x
+## Upgrading from 0.16.x to 0.17.x
+
+### UpdateAll and DeleteAll
+
+`UpdateAll` and `DeleteAll` now renamed to UpdateAny and DeleteAny respectively.
+
+=== "0.13.x"
+
+    ```go
+    // UpdateAny
+    err := repo.UpdateAny(ctx, query, Set("notes", "notes"))
+
+    // DeleteAny
+    err := repo.DeleteAny(ctx, query)
+    ```
+
+=== "0.14.x"
+
+    ```go
+    // UpdateAny
+    updatedCount, err := repo.UpdateAny(ctx, query, Set("notes", "notes"))
+
+    // DeleteAny
+    deletedCount, err := repo.DeleteAny(ctx, query)
+    ```
+
+## Upgrading from 0.13.x to 0.14.x
 
 ### UpdateAll and DeleteAll
 
@@ -26,7 +52,7 @@
     deletedCount, err := repo.DeleteAll(ctx, query)
     ```
 
-## Upgrading from 0.8.x 0.9.x
+## Upgrading from 0.8.x to 0.9.x
 
 ### Association Definition
 
