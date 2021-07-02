@@ -6,7 +6,7 @@ Website: https://go-rel.github.io
 
 ## Development
 
-1. Setup:
+1. Setup
     ```bash
     pip install \
         'requests' \
@@ -18,7 +18,7 @@ Website: https://go-rel.github.io
         'mkdocs-git-revision-date-plugin==0.3'
     ```
 
-2. Run:
+2. Run
     ```bash
     mkdocs serve
     ```
