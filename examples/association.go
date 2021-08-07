@@ -112,6 +112,18 @@ func PreloadNested(ctx context.Context, repo rel.Repository) error {
 	return err
 }
 
+// PreloadSlice docs example.
+func PreloadSlice(ctx context.Context, repo rel.Repository) error {
+	var transactions []Transaction
+
+	/// [preload-slice]
+	// transactions is []Transaction
+	err := repo.Preload(ctx, &transactions, "buyer.address")
+	/// [preload-slice]
+
+	return err
+}
+
 // InsertAssociation docs example.
 func InsertAssociation(ctx context.Context, repo rel.Repository) error {
 	/// [insert-association]
