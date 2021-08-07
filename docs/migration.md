@@ -17,7 +17,16 @@ Migrate and rollback function name is the camel cased file name without version.
 
 ## Running Migration
 
-REL provides CLI that can be used to run your migration, it can be installed using `go get` or downloaded from [release page](https://github.com/go-rel/rel/releases).
+REL provides CLI that can be used to run your migration, it can be installed using `homebrew`, `go get` or downloaded from [release page](https://github.com/go-rel/rel/releases).
+
+*Install using homebrew:*
+
+```bash
+brew tap go-rel/tap
+brew install rel
+```
+
+*Or, Install using go get:*
 
 ```bash
 go get github.com/go-rel/rel/cmd/rel
@@ -58,7 +67,7 @@ By default, REL will try to use database connection info that available as envir
 | `POSTGRES_HOST`       | PostgreSQL host (Optional)                                    |
 | `POSTGRES_PORT`       | PostgreSQL port (Optional)                                    |
 | `POSTGRES_DATABASE`   | PostgreSQL database (Required, if `POSTGRES_HOST` specified)  |
-| `POSTGRES_USERNAME`   | PostgreSQL username (Required, if `POSTGRES_HOST` specified   |
+| `POSTGRES_USERNAME`   | PostgreSQL username (Required, if `POSTGRES_HOST` specified)  |
 | `POSTGRES_PASSWORD`   | PostgreSQL password (Optional)                                |
 | `SQLITE3_DATABASE`    | SQLite3 database (Optional)                                   |
 
