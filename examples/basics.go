@@ -26,6 +26,7 @@ type Book struct {
 	Stock     int
 	AuthorID  int
 	Author    Author
+	Publisher string
 	CreatedAt time.Time
 	UpdatedAt time.Time
 }

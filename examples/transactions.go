@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/go-rel/rel"
+	"github.com/go-rel/rel/where"
 )
 
 // Process is blank function used for transaction example.
@@ -20,6 +21,13 @@ func Transactions(ctx context.Context, repo rel.Repository) error {
 
 		// Any database calls inside other function will be using the same transaction as long as it share the same context.
 		Process(ctx, transaction)
+
+		// Nested transaction
+		repo.Transaction(ctx, func(ctx context.Context) error {
+			repo.UpdateAny(ctx, rel.From("authors").Where(where.Eq("id", book.AuthorID)), rel.Inc("popularity"))
+			repo.UpdateAny(ctx, rel.From("publishers").Where(where.Eq("name", book.Publisher)), rel.Inc("popularity"))
+			return nil
+		})
 
 		return repo.Update(ctx, &transaction, rel.Set("status", "paid"))
 	})

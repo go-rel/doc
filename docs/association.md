@@ -48,6 +48,13 @@ Preload will load association to structs. To preload association, use `Preload`.
 === "Mock"
     {{ embed_code("examples/association_test.go", "preload-nested", "\t") }}
 
+*Preload also support slice, preload multiple transactions at once:*
+
+=== "Example"
+    {{ embed_code("examples/association.go","preload-nested", "\t") }}
+=== "Mock"
+    {{ embed_code("examples/association_test.go", "preload-nested", "\t") }}
+
 ## Inserting and Updating Association
 
 REL can automatically modifies association when it's parent is modified.

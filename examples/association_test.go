@@ -90,6 +90,22 @@ func TestPreloadNested(t *testing.T) {
 	repo.AssertExpectations(t)
 }
 
+func TestPreloadSlice(t *testing.T) {
+	var (
+		ctx  = context.TODO()
+		repo = reltest.New()
+	)
+
+	/// [preload-slice]
+	userID := 1
+	addresses := []Address{{ID: 1, City: "Nazarick", UserID: &userID}}
+	repo.ExpectPreload("buyer.address").Result(addresses)
+	/// [preload-slice]
+
+	assert.Nil(t, PreloadNested(ctx, repo))
+	repo.AssertExpectations(t)
+}
+
 func TestInsertAssociation(t *testing.T) {
 	var (
 		ctx  = context.TODO()
