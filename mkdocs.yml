@@ -23,9 +23,9 @@ nav:
     - github.com/go-rel/rel/group: reference/group.md
     - github.com/go-rel/rel/join: reference/join.md
     - github.com/go-rel/rel/migrator: reference/migrator.md
-    - github.com/go-rel/rel/reltest: reference/reltest.md
     - github.com/go-rel/rel/sort: reference/sort.md
     - github.com/go-rel/rel/where: reference/where.md
+    - github.com/go-rel/reltest: reference/reltest.md
     - github.com/go-rel/changeset: reference/changeset.md
     - github.com/go-rel/rel/adapter/mysql: reference/adapter-mysql.md
     - github.com/go-rel/rel/adapter/postgres: reference/adapter-postgres.md
