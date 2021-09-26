@@ -9,7 +9,6 @@ jobs:
     name: MkDocs
     runs-on: ubuntu-latest
     if: github.repository == 'go-rel/doc'
-    needs: Test
     steps:
       - name: Checkout doc
         uses: actions/checkout@v2
