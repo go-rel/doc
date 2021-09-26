@@ -1,1 +1,1 @@
-{{ godoc("github.com/go-rel/rel/adapter/sqlite3") }}
+{{ godoc("github.com/go-rel/sqlite3") }}
