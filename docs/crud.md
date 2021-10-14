@@ -89,7 +89,7 @@ An update using struct will cause all fields and association to be saved to data
 To delete a record in rel, simply pass the record to be deleted.
 
 !!! note
-    REL will automatically apply soft-delete if `DeletedAt time.Time` or `Deleted bool` field exists in a struct. To query soft-deleted records, use `rel.Unscoped(true)` when querying.
+    REL will automatically apply soft-delete if `DeletedAt *time.Time` or `Deleted bool` field exists in a struct. `DeletedAt` needs to be pointer, otherwise it won't be able to save or store null value. To query soft-deleted records, use `rel.Unscoped(true)` when querying.
 
 *Deleting a record:*
 
