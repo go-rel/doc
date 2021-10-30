@@ -15,7 +15,8 @@ Website: https://go-rel.github.io
         'mkdocs-material-extensions==1.0.1' \
         'mkdocs-minify-plugin==0.3.0' \
         'mkdocs-macros-plugin==0.4.15' \
-        'mkdocs-git-revision-date-plugin==0.3'
+        'mkdocs-git-revision-date-plugin==0.3 '\
+        'mkdocs-meta-descriptions-plugin===1.0.2'
     ```
 
 2. Run
