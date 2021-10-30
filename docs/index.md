@@ -1,4 +1,4 @@
 ---
 template: home.html
-title: Modern Database Access Layer for Golang
+title: Modern ORM for Golang
 ---
