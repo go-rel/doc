@@ -13,7 +13,7 @@ Migrate and rollback function name is the camel cased file name without version.
 !!! note
     Sample project that demonstrate this setup can be found at https://github.com/go-rel/gin-example
 
-{{ embed_code("examples/migrations/20202806225100_create_todos.go") }}
+{{ embed_code("examples/db/migrations/20202806225100_create_todos.go") }}
 
 ## Running Migration
 
@@ -76,3 +76,9 @@ By default, REL will try to use database connection info that available as envir
 ```bash
 rel migrate -adapter=github.com/go-rel/rel/adapter/sqlite3 -driver=github.com/mattn/go-sqlite3 -dsn=:memory:
 ```
+
+## Migration API
+
+If you need more flexibility, migration API can be used to manually execute migrations.
+
+{{ embed_code("examples/db/api.go") }}

@@ -3,6 +3,8 @@
 package migrations
 
 import (
+	"context"
+
 	"github.com/go-rel/rel"
 )
 
@@ -18,6 +20,11 @@ func MigrateCreateTodos(schema *rel.Schema) {
 	})
 
 	schema.CreateIndex("todos", "order", []string{"order"})
+
+	schema.Do(func(repo rel.Repository) error {
+		// add seeds
+		return repo.Insert(context.TODO(), &Todo{Title: "Do homework"})
+	})
 }
 
 // RollbackCreateTodos definition
