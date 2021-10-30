@@ -22,7 +22,7 @@ jobs:
           path: site
       - uses: actions/setup-python@v1
         with:
-          python-version: 3.x
+          python-version: 3.9
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
