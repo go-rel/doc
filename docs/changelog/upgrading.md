@@ -1,5 +1,55 @@
 # Upgrading
 
+## Upgrading from 0.29.x to 0.30.x
+
+### SQLite3 Adapter
+
+Builtin `github.com/go-rel/rel/adapter/sqlite3` adapter has been extracted to `github.com/go-rel/sqlite3`.
+
+=== "0.29.x"
+
+    ```go
+    import "github.com/go-rel/rel/adapter/sqlite3"
+    ```
+
+=== "0.30.x"
+
+    ```go
+    import "github.com/go-rel/sqlite3"
+    ```
+
+### MySQL Adapter
+
+Builtin `github.com/go-rel/rel/adapter/mysql` adapter has been extracted to `github.com/go-rel/mysql`.
+
+=== "0.29.x"
+
+    ```go
+    import "github.com/go-rel/rel/adapter/mysql"
+    ```
+
+=== "0.30.x"
+
+    ```go
+    import "github.com/go-rel/mysql"
+    ```
+
+### Postgres Adapter
+
+Builtin `github.com/go-rel/rel/adapter/postgres` adapter has been extracted to `github.com/go-rel/postgres`.
+
+=== "0.29.x"
+
+    ```go
+    import "github.com/go-rel/rel/adapter/postgres"
+    ```
+
+=== "0.30.x"
+
+    ```go
+    import "github.com/go-rel/postgres"
+    ```
+
 ## Upgrading from 0.16.x to 0.17.x
 
 ### UpdateAll and DeleteAll
