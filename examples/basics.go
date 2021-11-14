@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
+	"github.com/go-rel/mysql"
 	"github.com/go-rel/rel"
-	"github.com/go-rel/rel/adapter/mysql"
 	"github.com/go-rel/rel/where"
 	_ "github.com/go-sql-driver/mysql"
 )
