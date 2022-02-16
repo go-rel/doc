@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/go-rel/mysql v0.6.0
-	github.com/go-rel/rel v0.30.0
+	github.com/go-rel/rel v0.31.0
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/stretchr/testify v1.7.0
