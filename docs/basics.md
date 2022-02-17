@@ -53,7 +53,7 @@ func (b Book) Table() string {
 
 ### Column Name
 
-Column name will be the struct field name in snake case, you may override the column name by using using `db` tag.
+Column name will be the struct field name in snake case, you may override the column name by using `db` tag.
 
 ```go
 type Book struct {
@@ -77,3 +77,19 @@ type Book struct {
 ### Timestamp
 
 REL automatically track created and updated time of each struct if `CreatedAt` or `UpdatedAt` field exists.
+
+### Embedded structs
+
+REL supports embedding structs and struct pointers. By default, fields of embedded structs have no column name prefix. A prefix can be set with the `db` tag
+
+```go
+type Model struct {
+	ID    int
+	Owner int
+}
+
+type Book struct {
+	Model `db:"model_"` // id and owner will mapped to model_id and model_owner
+	Title string
+}
+```
