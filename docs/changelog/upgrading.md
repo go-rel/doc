@@ -1,5 +1,24 @@
 # Upgrading
 
+## Upgrading from 0.31.x to 0.32.x
+
+### Import Path
+
+Builtin `github.com/go-rel/rel/reltest` adapter has been refactored to `github.com/go-rel/reltest`.
+
+=== "0.31.x"
+
+    ```go
+    import "github.com/go-rel/rel/reltest"
+    ```
+
+=== "0.32.x"
+
+    ```go
+    import "github.com/go-rel/rel"
+    ```
+
+
 ## Upgrading from 0.29.x to 0.30.x
 
 ### SQLite3 Adapter
@@ -132,7 +151,7 @@ Before 0.9.x all association is saved as is when its parent is modified, after t
 
 ## Upgrading from 0.7.x to 0.8.x
 
-### Import path
+### Import Path
 
 REL is migrated to a new github organization and all import path need to be moved from `Fs02` to `go-rel`
 
