@@ -1,1 +1,1 @@
-{{ godoc("github.com/go-rel/rel/migration") }}
+{{ godoc("github.com/go-rel/migration") }}

@@ -30,7 +30,7 @@ A new record can be inserted to database using a struct, map or set function. To
 
 ## Read
 
-REL provides a powerful API for querying record from database. To query a record, simply use the Find method, it's accept the returned result as the first argument, and the conditions for the rest arguments.
+REL provides a powerful API for querying record from database. To query a record, simply use the Find method, it accepts the returned result as the first argument, and the conditions for the rest arguments.
 
 *Retrieve a book with id 1:*
 
