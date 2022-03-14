@@ -57,6 +57,7 @@ def define_env(env):
                 pattern = re.compile(r"^\w{7}\s.+\(\#\d+\)$")
                 lines = release["body"].splitlines()
                 for line in lines:
+                    line = line.lstrip("* ")
                     if pattern.match(line):
                         body += "\n- " + line[7:]
             else:
