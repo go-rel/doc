@@ -1,5 +1,9 @@
 # Upgrading
 
+## Upgrading from 0.32.x to 0.33.x
+
+Rel v0.33.x adds `rel.OnConflict` mutator that requires adapter interface changes. because of that, when upgrading to this version, **other Rel packages need to be upgraded at the same time as well**.
+
 ## Upgrading from 0.31.x to 0.32.x
 
 ### Import Path
