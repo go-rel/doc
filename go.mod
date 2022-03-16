@@ -9,7 +9,7 @@ require (
 	github.com/go-rel/reltest v0.8.1
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/kr/pretty v0.1.0 // indirect
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 // indirect
 	golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 // indirect
 	golang.org/x/text v0.3.7 // indirect
