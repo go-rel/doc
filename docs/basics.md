@@ -19,6 +19,7 @@ Testing database query using REL can be done using [reltest](/reference/reltest/
 
 - [gin-example](https://github.com/go-rel/gin-example) - Todo Backend using Gin and REL
 - [go-todo-backend](https://github.com/Fs02/go-todo-backend) - Todo Backend using Chi and REL
+- [iris-example](https://github.com/iris-contrib/go-rel-iris-example) - Todo Backend using Iris and REL
 
 ## Conventions
 
