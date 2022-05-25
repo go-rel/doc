@@ -10,6 +10,7 @@ Website: https://go-rel.github.io
     ```bash
     pip install \
         'requests' \
+        'jinja2==3.0.3' \
         'mkdocs==1.1.2' \
         'mkdocs-material==6.0.0' \
         'mkdocs-material-extensions==1.0.1' \
@@ -17,6 +18,8 @@ Website: https://go-rel.github.io
         'mkdocs-macros-plugin==0.4.15' \
         'mkdocs-git-revision-date-plugin==0.3 '\
         'mkdocs-meta-descriptions-plugin===1.0.2'
+
+    go get github.com/Yarn-e/godoc2md
     ```
 
 2. Run
