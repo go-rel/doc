@@ -5,7 +5,7 @@ go 1.14
 require (
 	github.com/go-rel/migration v0.2.1
 	github.com/go-rel/mysql v0.7.0
-	github.com/go-rel/rel v0.34.1
+	github.com/go-rel/rel v0.35.0
 	github.com/go-rel/reltest v0.9.0
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/kr/pretty v0.1.0 // indirect
