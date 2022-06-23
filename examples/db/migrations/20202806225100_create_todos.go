@@ -21,9 +21,9 @@ func MigrateCreateTodos(schema *rel.Schema) {
 
 	schema.CreateIndex("todos", "order", []string{"order"})
 
-	schema.Do(func(repo rel.Repository) error {
+	schema.Do(func(ctx context.Context, repo rel.Repository) error {
 		// add seeds
-		return repo.Insert(context.TODO(), &Todo{Title: "Do homework"})
+		return repo.Insert(ctx, &Todo{Title: "Do homework"})
 	})
 }
 
