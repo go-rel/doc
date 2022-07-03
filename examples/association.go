@@ -124,6 +124,18 @@ func PreloadSlice(ctx context.Context, repo rel.Repository) error {
 	return err
 }
 
+// JoinAssocBelongsTo docs example.
+func JoinAssocBelongsTo(ctx context.Context, repo rel.Repository) error {
+	var transactions []Transaction
+
+	/// [join-assoc-belongs-to]
+	// Select "buyer.*" field tell REL to load the joined table to result as well.
+	err := repo.FindAll(ctx, &transactions, rel.Select("*", "buyer.*").JoinAssoc("buyer"))
+	/// [join-assoc-belongs-to]
+
+	return err
+}
+
 // InsertAssociation docs example.
 func InsertAssociation(ctx context.Context, repo rel.Repository) error {
 	/// [insert-association]
