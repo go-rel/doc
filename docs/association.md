@@ -55,6 +55,18 @@ Preload will load association to structs. To preload association, use `Preload`.
 === "Mock"
     {{ embed_code("examples/association_test.go", "preload-nested", "\t") }}
 
+## Joining Association
+
+Beside [manually joining table](/queries/#joining-tables) using Join query, REL can also detect which field to join by using `JoinAssoc` method.
+It's also possible to load the result of joined table for has many and belongs to association by specifying it in the `Select` query.
+
+*Query Transaction with Buyer (`belongs to` association):*
+
+=== "Example"
+    {{ embed_code("examples/association.go","join-assoc-belongs-to", "\t") }}
+=== "Mock"
+    {{ embed_code("examples/association_test.go", "join-assoc-belongs-to", "\t") }}
+
 ## Inserting and Updating Association
 
 REL can automatically modifies association when it's parent is modified.

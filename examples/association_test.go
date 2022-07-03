@@ -106,6 +106,21 @@ func TestPreloadSlice(t *testing.T) {
 	repo.AssertExpectations(t)
 }
 
+func TestJoinAssocBelongsTo(t *testing.T) {
+	var (
+		ctx  = context.TODO()
+		repo = reltest.New()
+	)
+
+	/// [join-assoc-belongs-to]
+	transactions := []Transaction{{ID: 1, BuyerID: 2, Buyer: User{ID: 2, Name: "Nabe"}}}
+	repo.ExpectFindAll(rel.Select("*", "buyer.*").JoinAssoc("buyer")).Result(transactions)
+	/// [join-assoc-belongs-to]
+
+	assert.Nil(t, JoinAssocBelongsTo(ctx, repo))
+	repo.AssertExpectations(t)
+}
+
 func TestInsertAssociation(t *testing.T) {
 	var (
 		ctx  = context.TODO()
