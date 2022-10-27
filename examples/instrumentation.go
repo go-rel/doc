@@ -11,7 +11,7 @@ import (
 // Instrumentation docs example.
 func Instrumentation(ctx context.Context, repo rel.Repository) {
 	/// [instrumentation]
-	repo.Instrumentation(func(ctx context.Context, op string, message string) func(err error) {
+	repo.Instrumentation(func(ctx context.Context, op string, message string, args ...any) func(err error) {
 		t := time.Now()
 
 		return func(err error) {
