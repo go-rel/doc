@@ -42,7 +42,7 @@ jobs:
             'mkdocs-meta-descriptions-plugin===1.0.2'
       - name: Install godoc2md
         working-directory: doc
-        run: go get github.com/Yarn-e/godoc2md
+        run: go install github.com/Yarn-e/godoc2md
       - name: Build site
         working-directory: doc
         env:
