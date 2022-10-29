@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/go-rel/mysql"
+	"github.com/go-rel/postgres"
 	"github.com/go-rel/rel"
 	"github.com/go-rel/rel/where"
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 )
 
 // Author is a model that maps to authors table.
@@ -31,11 +31,11 @@ type Book struct {
 	UpdatedAt time.Time
 }
 
-var dsn = "root@(127.0.0.1:3306)/db?charset=utf8&parseTime=True&loc=Local"
+var dsn = "postgres://postgres@localhost/rel_test?sslmode=disable"
 
 func main() {
-	// initialize mysql adapter.
-	adapter, _ := mysql.Open(dsn)
+	// initialize postgres adapter.
+	adapter, _ := postgres.Open(dsn)
 	defer adapter.Close()
 
 	// initialize rel's repo.
