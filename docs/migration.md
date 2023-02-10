@@ -29,7 +29,12 @@ brew install rel
 *Or, Install using go get:*
 
 ```bash
-go get github.com/go-rel/rel/cmd/rel
+go get github.com/go-rel/cmd/rel
+```
+
+*Since Go 1.18 use go install:*
+```bash
+go install github.com/go-rel/cmd/rel@latest
 ```
 
 *Verify installation:*
