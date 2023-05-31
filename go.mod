@@ -10,7 +10,7 @@ require (
 	github.com/go-rel/reltest v0.11.0
 	github.com/go-sql-driver/mysql v1.7.0
 	github.com/lib/pq v1.10.9
-	github.com/stretchr/testify v1.8.3
+	github.com/stretchr/testify v1.8.4
 )
 
 require (
