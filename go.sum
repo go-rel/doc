@@ -6,8 +6,8 @@ github.com/fsnotify/fsnotify v1.4.9/go.mod h1:znqG4EE+3YCdAaPaxE2ZRY/06pZUdp0tY4
 github.com/fsnotify/fsnotify v1.6.0 h1:n+5WquG0fcWoWp6xPWfHdbskMCQaFnG6PfBrh1Ky4HY=
 github.com/go-rel/migration v0.3.1 h1:Y9wSeBOsaZaSiiTchwS1GBhvLxQMnnOSSLAjgfSSckc=
 github.com/go-rel/migration v0.3.1/go.mod h1:qIfXgsIK61xUT4YKdt/ceQ5mTvzOfNa3Z69dcrAcRKw=
-github.com/go-rel/mysql v0.9.1 h1:hHrLz1MFPW1H72kRemoigx0KtZyrFr4GFEz85c+ypfU=
-github.com/go-rel/mysql v0.9.1/go.mod h1:gjpOe9PNvAnkmK7EP1Ne3gbrwkRSQ/VUx8d5BHrXWaU=
+github.com/go-rel/mysql v0.10.0 h1:2K6NT3e2OIhvJZWswzDnwNLLsbeIX+7SQg+kUYYdPBY=
+github.com/go-rel/mysql v0.10.0/go.mod h1:aDRiKtGFj+xzOorJWYt1IEAUhoRnMxWlFQ7o0RZzspE=
 github.com/go-rel/postgres v0.9.0 h1:4QSlB1AI1irXyLxYS3f6cE1d0EJ7Q5JPcA8HGr8ZBEk=
 github.com/go-rel/postgres v0.9.0/go.mod h1:rF/HtFwHBx8wHr7+oZK1x2TX0Dbr20ams62WtPy2tVU=
 github.com/go-rel/primaryreplica v0.4.0 h1:lhU+4dh0/sDQEs602Chiz0SJDXewPU06baWQlx7oB3c=
