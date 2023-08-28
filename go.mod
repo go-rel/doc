@@ -5,8 +5,8 @@ go 1.19
 require (
 	github.com/go-rel/migration v0.3.1
 	github.com/go-rel/mysql v0.10.0
-	github.com/go-rel/postgres v0.9.0
-	github.com/go-rel/rel v0.39.0
+	github.com/go-rel/postgres v0.10.0
+	github.com/go-rel/rel v0.40.0
 	github.com/go-rel/reltest v0.11.0
 	github.com/go-sql-driver/mysql v1.7.0
 	github.com/lib/pq v1.10.9
@@ -15,7 +15,7 @@ require (
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/go-rel/sql v0.14.0 // indirect
+	github.com/go-rel/sql v0.15.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
