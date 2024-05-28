@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/go-rel/migration v0.3.1
-	github.com/go-rel/mysql v0.12.0
+	github.com/go-rel/mysql v0.13.0
 	github.com/go-rel/postgres v0.12.0
 	github.com/go-rel/rel v0.42.0
 	github.com/go-rel/reltest v0.12.0
