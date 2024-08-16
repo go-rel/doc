@@ -19,7 +19,7 @@ Website: https://go-rel.github.io
         'mkdocs-git-revision-date-plugin==0.3 '\
         'mkdocs-meta-descriptions-plugin===1.0.2'
 
-    go get github.com/Yarn-e/godoc2md
+    go get github.com/Fs02/godoc2md
     ```
 
 2. Run

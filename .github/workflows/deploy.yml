@@ -43,8 +43,8 @@ jobs:
       - name: Install godoc2md
         working-directory: doc
         run: |
-          go get github.com/Yarn-e/godoc2md
-          go install github.com/Yarn-e/godoc2md
+          go get github.com/Fs02/godoc2md
+          go install github.com/Fs02/godoc2md
       - name: Build site
         working-directory: doc
         env:
