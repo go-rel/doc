@@ -76,7 +76,7 @@ def define_env(env):
         """
         Generate Godoc
         """
-        subprocess.run(['go', 'get', 'pkg'])
+        subprocess.run(['go', 'get', pkg])
         result = subprocess.run(
             ['godoc2md', '-template=docs/reference/godoc.tpl', pkg], stdout=subprocess.PIPE)
         return result.stdout.decode("utf-8")
