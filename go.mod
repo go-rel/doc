@@ -1,8 +1,7 @@
 module github.com/go-rel/doc
 
 go 1.21
-
-toolchain go1.22.2
+toolchain go1.24.1
 
 require (
 	github.com/go-rel/migration v0.3.1
@@ -10,7 +9,7 @@ require (
 	github.com/go-rel/postgres v0.12.0
 	github.com/go-rel/rel v0.42.0
 	github.com/go-rel/reltest v0.12.0
-	github.com/go-sql-driver/mysql v1.8.1
+	github.com/go-sql-driver/mysql v1.9.1
 	github.com/lib/pq v1.10.9
 	github.com/stretchr/testify v1.9.0
 )
